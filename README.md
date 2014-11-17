@@ -18,7 +18,7 @@ We can call the Egison interpreter with the following command.
 
 ```
 $ docker run -t -i egison/egison.latest
-Egison Version 3.3.13 (C) 2011-2014 Satoshi Egi
+Egison Version 3.3.14 (C) 2011-2014 Satoshi Egi
 http://www.egison.org
 Welcome to Egison Interpreter!
 > 
@@ -36,7 +36,7 @@ $ cat egison/sample/io/hello.egi
 (define $main
   (lambda [$args]
     (print "Hello, world!")))
-$ docker run -t -i -v $(pwd):/docker:ro egison/egison:latest sample/io/hello.egi
+$ docker run -t -i -v $(pwd):/docker:ro egison/egison:latest egison/sample/io/hello.egi
 Hello, world!
 ```
 
