@@ -17,7 +17,7 @@ $ docker pull egison/egison:latest
 We can call the Egison interpreter with the following command.
 
 ```
-$ docker run -t -i egison/egison.latest
+$ docker run -t -i egison/egison:latest
 Egison Version 3.3.14 (C) 2011-2014 Satoshi Egi
 http://www.egison.org
 Welcome to Egison Interpreter!
@@ -31,12 +31,27 @@ We can execute an Egison script with the following command.
 We can execute an Egison script under the current directory.
 
 ```
-$ git clone https://github.com/egison/egison
-$ cat egison/sample/io/hello.egi
+$ cat > hello.egi
 (define $main
   (lambda [$args]
     (print "Hello, world!")))
-$ docker run -t -i -v $(pwd):/docker:ro egison/egison:latest egison/sample/io/hello.egi
+$ docker run -t -i -v $(pwd):/docker:ro egison/egison:latest hello.egi
+Hello, world!
+```
+
+## Setting
+
+We can set an alias as follow.
+
+```
+$ alias egison-docker='docker run -t -i -v $(pwd):/docker:ro egison/egison:latest'
+$ egison-docker
+Egison Version 3.3.14 (C) 2011-2014 Satoshi Egi
+http://www.egison.org
+Welcome to Egison Interpreter!
+> 
+Leaving Egison Interpreter.
+$ egison hello.egi
 Hello, world!
 ```
 
