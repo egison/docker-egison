@@ -51,7 +51,7 @@ http://www.egison.org
 Welcome to Egison Interpreter!
 > 
 Leaving Egison Interpreter.
-$ egison hello.egi
+$ egison-docker hello.egi
 Hello, world!
 ```
 
