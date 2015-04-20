@@ -18,7 +18,7 @@ We can call the Egison interpreter with the following command.
 
 ```
 $ docker run -t -i egison/egison:latest
-Egison Version 3.3.14 (C) 2011-2014 Satoshi Egi
+Egison Version 3.5.6 (C) 2011-2014 Satoshi Egi
 http://www.egison.org
 Welcome to Egison Interpreter!
 > 
@@ -46,7 +46,7 @@ We can set an alias as follow.
 ```
 $ alias egison-docker='docker run -t -i -v $(pwd):/docker:ro egison/egison:latest'
 $ egison-docker
-Egison Version 3.3.14 (C) 2011-2014 Satoshi Egi
+Egison Version 3.5.6 (C) 2011-2014 Satoshi Egi
 http://www.egison.org
 Welcome to Egison Interpreter!
 > 
