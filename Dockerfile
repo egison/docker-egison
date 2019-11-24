@@ -10,7 +10,7 @@ RUN apt-get update
 RUN apt-get -y install libncurses-dev
 RUN apt-get -y install haskell-platform
 RUN cabal update
-RUN cabal install egison
+RUN cabal install egison egison-tutorial
 ENV PATH /root/.cabal/bin:$PATH
 
 WORKDIR /docker
