@@ -10,6 +10,7 @@
 set -euo pipefail
 
 TEST="${TEST:-}"
+# REPO="egison/egison"
 REPO="eggplanter/egison"
 EGISON_VERSIONS=(
 
