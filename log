@@ -1,0 +1,435 @@
+[[[ 4.0.0 ]]]
+#1 [internal] load build definition from Dockerfile
+#1 sha256:b1572bc9f01814181a3915c9c6e1357414e755235950abccca2301103dc37182
+#1 transferring dockerfile: 37B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:ab32a45134e6a4ce938b5ae75c66d9cc20c41ae9473c58b7ada899fb731923d2
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#4 [auth] library/haskell:pull token for registry-1.docker.io
+#4 sha256:8a8553ca5efc51e2a8deec7c1c8d25c4bc518aa85e51f5a57a8f0bd4b0e65532
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/haskell:8
+#3 sha256:c389f6bc819c3e1e9a9517e041184a8f70c8b5cee262df909e966b36426e3656
+#3 DONE 2.4s
+
+#5 [1/3] FROM docker.io/library/haskell:8@sha256:18589fed1f9557cb323d5b9ce7b8b122c530f8f8c8c227c9ff8c14f00eb17793
+#5 sha256:906ada123d5ead53c1256740cfbd294cdb84e16707cbd249ba7d97feefc12059
+#5 DONE 0.0s
+
+#6 [2/3] RUN cabal update &&   if [ "$(   echo -e "3.0.11\n4.0.0" | sort -V | head -1   )" = "3.0.11" ]; then   cabal install   egison-4.0.0   egison-tutorial;   else   cabal install   egison   --constraint "egison == 4.0.0";   fi
+#6 sha256:04d637135420332e21db60850917ab5fea91ff89241927401f439c11e934df39
+#6 CACHED
+
+#7 [3/3] WORKDIR /docker
+#7 sha256:edff7a68fe30c733efae26adbc8d6ecdbce6e32b2ce91793c1bbe63cbef98c7a
+#7 CACHED
+
+#8 exporting to image
+#8 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#8 exporting layers done
+#8 writing image sha256:6cdc3273aac1f57387f504801a0614eaac9dc573fcc2ec94f7d83abfdf89ca43 done
+#8 naming to docker.io/eggplanter/egison:4.0.0 done
+#8 DONE 0.0s
+The push refers to repository [docker.io/eggplanter/egison]
+f4d6f0a7d0e1: Preparing
+aa9dd9f1aacc: Preparing
+655fa2039376: Preparing
+37bf3f43e479: Preparing
+ec2b97467d74: Preparing
+c5f944ee08e0: Preparing
+2c7e7ab2260a: Preparing
+c5f944ee08e0: Waiting
+2c7e7ab2260a: Waiting
+655fa2039376: Layer already exists
+aa9dd9f1aacc: Layer already exists
+f4d6f0a7d0e1: Layer already exists
+ec2b97467d74: Layer already exists
+37bf3f43e479: Layer already exists
+2c7e7ab2260a: Layer already exists
+c5f944ee08e0: Layer already exists
+4.0.0: digest: sha256:1d76617fdef7c4a1b3dcc575ace3f4632a5f4d58d58975c2c379985334cdb077 size: 1799
+[[[ 4.0.1 ]]]
+#1 [internal] load build definition from Dockerfile
+#1 sha256:0977fca2e5ebf41b94cc30ebfc4db21533d4bcb141f597c39c3acb396ffdad4a
+#1 transferring dockerfile: 37B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:e5f43720d4a48c8fa07ea04a6f50fe6afdba0f8b1d3f223c341d8da5bda6cf40
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/haskell:8
+#3 sha256:c389f6bc819c3e1e9a9517e041184a8f70c8b5cee262df909e966b36426e3656
+#3 DONE 0.9s
+
+#4 [1/3] FROM docker.io/library/haskell:8@sha256:18589fed1f9557cb323d5b9ce7b8b122c530f8f8c8c227c9ff8c14f00eb17793
+#4 sha256:906ada123d5ead53c1256740cfbd294cdb84e16707cbd249ba7d97feefc12059
+#4 CACHED
+
+#5 [2/3] RUN cabal update &&   if [ "$(   echo -e "3.0.11\n4.0.1" | sort -V | head -1   )" = "3.0.11" ]; then   cabal install   egison-4.0.1   egison-tutorial;   else   cabal install   egison   --constraint "egison == 4.0.1";   fi
+#5 sha256:af41d76334acd86831421fe3c5cde4d0f8d9fc28201049d37c0dd2ccd8ea6ef3
+#5 0.295 Config file path source is default config file.
+#5 0.295 Config file /root/.cabal/config not found.
+#5 0.297 Writing default configuration to /root/.cabal/config
+#5 1.492 Downloading the latest package list from hackage.haskell.org
+#5 54.67 Updated package list of hackage.haskell.org to the index-state 2021-12-11T03:42:51Z
+#5 58.36 Resolving dependencies...
+#5 59.63 Build profile: -w ghc-8.10.7 -O1
+#5 59.63 In order, the following will be built (use -v for more details):
+#5 59.63  - StateVar-1.2.2 (lib) (requires download & build)
+#5 59.63  - base-orphans-0.8.6 (lib) (requires download & build)
+#5 59.63  - colour-2.3.6 (lib) (requires download & build)
+#5 59.63  - ghc-paths-0.1.0.12 (lib:ghc-paths) (requires download & build)
+#5 59.63  - happy-1.20.0 (exe:happy) (requires download & build)
+#5 59.63  - indexed-traversable-0.1.2 (lib) (requires download & build)
+#5 59.63  - integer-logarithms-1.0.3.1 (lib) (requires download & build)
+#5 59.63  - parser-combinators-1.2.1 (lib) (requires download & build)
+#5 59.63  - prettyprinter-1.7.1 (lib) (requires download & build)
+#5 59.63  - primitive-0.7.3.0 (lib) (requires download & build)
+#5 59.63  - regex-base-0.94.0.2 (lib) (requires download & build)
+#5 59.63  - safe-0.3.19 (lib) (requires download & build)
+#5 59.63  - split-0.2.3.4 (lib) (requires download & build)
+#5 59.63  - splitmix-0.1.0.4 (lib) (requires download & build)
+#5 59.63  - syb-0.7.2.1 (lib) (requires download & build)
+#5 59.63  - tagged-0.8.6.1 (lib) (requires download & build)
+#5 59.63  - th-abstraction-0.4.3.0 (lib) (requires download & build)
+#5 59.63  - th-compat-0.1.3 (lib) (requires download & build)
+#5 59.63  - transformers-compat-0.7.1 (lib) (requires download & build)
+#5 59.63  - contravariant-1.5.5 (lib) (requires download & build)
+#5 59.63  - hashable-1.4.0.1 (lib) (requires download & build)
+#5 59.63  - ansi-terminal-0.11.1 (lib) (requires download & build)
+#5 59.63  - haskell-src-exts-1.23.1 (lib) (requires download & build)
+#5 59.63  - vector-0.12.3.1 (lib) (requires download & build)
+#5 59.63  - regex-tdfa-1.3.1.1 (lib) (requires download & build)
+#5 59.63  - regex-posix-0.96.0.1 (lib) (requires download & build)
+#5 59.63  - random-1.2.1 (lib) (requires download & build)
+#5 59.63  - distributive-0.6.2.1 (lib) (requires download & build)
+#5 59.63  - th-lift-0.8.2 (lib) (requires download & build)
+#5 59.63  - th-expand-syns-0.4.9.0 (lib) (requires download & build)
+#5 59.63  - transformers-base-0.4.6 (lib) (requires download & build)
+#5 59.63  - unordered-containers-0.2.16.0 (lib) (requires download & build)
+#5 59.63  - scientific-0.3.7.0 (lib) (requires download & build)
+#5 59.63  - data-fix-0.3.2 (lib) (requires download & build)
+#5 59.63  - case-insensitive-1.2.1.0 (lib) (requires download & build)
+#5 59.63  - ansi-wl-pprint-0.6.9 (lib) (requires download & build)
+#5 59.63  - comonad-5.0.8 (lib) (requires download & build)
+#5 59.63  - th-lift-instances-0.1.18 (lib) (requires download & build)
+#5 59.63  - th-reify-many-0.1.10 (lib) (requires download & build)
+#5 59.63  - megaparsec-9.2.0 (lib) (requires download & build)
+#5 59.63  - optparse-applicative-0.16.1.0 (lib) (requires download & build)
+#5 59.63  - bifunctors-5.5.11 (lib) (requires download & build)
+#5 59.63  - th-orphans-0.13.12 (lib) (requires download & build)
+#5 59.63  - semigroupoids-5.3.6 (lib) (requires download & build)
+#5 59.63  - profunctors-5.6.2 (lib) (requires download & build)
+#5 59.63  - haskell-src-meta-0.8.7 (lib) (requires download & build)
+#5 59.63  - free-5.1.7 (lib) (requires download & build)
+#5 59.63  - recursion-schemes-5.2.2.2 (lib) (requires download & build)
+#5 59.63  - egison-pattern-src-0.2.1.2 (lib) (requires download & build)
+#5 59.63  - egison-pattern-src-th-mode-0.2.1.2 (lib) (requires download & build)
+#5 59.63  - mini-egison-1.0.0 (lib) (requires download & build)
+#5 59.63  - egison-4.0.1 (lib) (requires download & build)
+#5 59.63  - egison-tutorial-4.0.0 (exe:egison-tutorial) (requires download & build)
+#5 59.63  - egison-4.0.1 (exe:egison-translate) (requires download & build)
+#5 59.63  - egison-4.0.1 (exe:egison) (requires download & build)
+#5 59.65 Downloading  base-orphans-0.8.6
+#5 59.86 Downloaded   base-orphans-0.8.6
+#5 59.86 Downloading  colour-2.3.6
+#5 59.90 Starting     base-orphans-0.8.6 (lib)
+#5 60.14 Downloaded   colour-2.3.6
+#5 60.14 Downloading  parser-combinators-1.2.1
+#5 60.17 Starting     colour-2.3.6 (lib)
+#5 60.42 Downloaded   parser-combinators-1.2.1
+#5 60.42 Downloading  safe-0.3.19
+#5 60.62 Building     base-orphans-0.8.6 (lib)
+#5 60.70 Downloaded   safe-0.3.19
+#5 60.70 Downloading  split-0.2.3.4
+#5 60.89 Building     colour-2.3.6 (lib)
+#5 60.94 Downloaded   split-0.2.3.4
+#5 60.94 Downloading  syb-0.7.2.1
+#5 61.12 Downloaded   syb-0.7.2.1
+#5 61.12 Downloading  transformers-compat-0.7.1
+#5 61.42 Downloaded   transformers-compat-0.7.1
+#5 61.42 Downloading  th-abstraction-0.4.3.0
+#5 61.65 Downloaded   th-abstraction-0.4.3.0
+#5 61.65 Downloading  th-compat-0.1.3
+#5 61.81 Downloaded   th-compat-0.1.3
+#5 61.81 Downloading  th-expand-syns-0.4.9.0
+#5 61.98 Downloaded   th-expand-syns-0.4.9.0
+#5 61.98 Downloading  th-lift-0.8.2
+#5 62.15 Downloaded   th-lift-0.8.2
+#5 62.15 Downloading  th-reify-many-0.1.10
+#5 62.33 Downloaded   th-reify-many-0.1.10
+#5 62.33 Downloading  primitive-0.7.3.0
+#5 63.37 Downloaded   primitive-0.7.3.0
+#5 63.37 Downloading  splitmix-0.1.0.4
+#5 63.57 Downloaded   splitmix-0.1.0.4
+#5 63.57 Downloading  random-1.2.1
+#5 63.82 Downloaded   random-1.2.1
+#5 63.82 Downloading  tagged-0.8.6.1
+#5 64.03 Downloaded   tagged-0.8.6.1
+#5 64.03 Downloading  distributive-0.6.2.1
+#5 64.20 Downloaded   distributive-0.6.2.1
+#5 64.20 Downloading  vector-0.12.3.1
+#5 64.42 Downloaded   vector-0.12.3.1
+#5 64.42 Downloading  happy-1.20.0
+#5 64.62 Downloaded   happy-1.20.0
+#5 64.62 Downloading  haskell-src-exts-1.23.1
+#5 64.74 Starting     happy-1.20.0 (exe:happy)
+#5 65.07 Downloaded   haskell-src-exts-1.23.1
+#5 65.07 Downloading  indexed-traversable-0.1.2
+#5 65.22 Downloaded   indexed-traversable-0.1.2
+#5 65.22 Downloading  comonad-5.0.8
+#5 65.25 Starting     indexed-traversable-0.1.2 (lib)
+#5 65.43 Building     happy-1.20.0 (exe:happy)
+#5 65.44 Downloaded   comonad-5.0.8
+#5 65.44 Downloading  bifunctors-5.5.11
+#5 65.66 Downloaded   bifunctors-5.5.11
+#5 65.66 Downloading  integer-logarithms-1.0.3.1
+#5 65.86 Downloaded   integer-logarithms-1.0.3.1
+#5 65.86 Downloading  transformers-base-0.4.6
+#5 65.88 Installing   base-orphans-0.8.6 (lib)
+#5 66.06 Downloaded   transformers-base-0.4.6
+#5 66.06 Downloading  hashable-1.4.0.1
+#5 66.13 Building     indexed-traversable-0.1.2 (lib)
+#5 66.24 Completed    base-orphans-0.8.6 (lib)
+#5 66.26 Starting     integer-logarithms-1.0.3.1 (lib)
+#5 66.28 Downloaded   hashable-1.4.0.1
+#5 66.28 Downloading  case-insensitive-1.2.1.0
+#5 66.46 Downloaded   case-insensitive-1.2.1.0
+#5 66.46 Downloading  data-fix-0.3.2
+#5 66.67 Downloaded   data-fix-0.3.2
+#5 66.67 Downloading  unordered-containers-0.2.16.0
+#5 66.86 Downloaded   unordered-containers-0.2.16.0
+#5 66.86 Downloading  prettyprinter-1.7.1
+#5 67.04 Downloaded   prettyprinter-1.7.1
+#5 67.04 Downloading  regex-base-0.94.0.2
+#5 67.09 Building     integer-logarithms-1.0.3.1 (lib)
+#5 67.19 Downloaded   regex-base-0.94.0.2
+#5 67.19 Downloading  regex-posix-0.96.0.1
+#5 67.35 Downloaded   regex-posix-0.96.0.1
+#5 67.35 Downloading  regex-tdfa-1.3.1.1
+#5 67.52 Downloaded   regex-tdfa-1.3.1.1
+#5 67.52 Downloading  scientific-0.3.7.0
+#5 67.61 Installing   colour-2.3.6 (lib)
+#5 67.67 Downloaded   scientific-0.3.7.0
+#5 67.67 Downloading  megaparsec-9.2.0
+#5 67.84 Downloaded   megaparsec-9.2.0
+#5 67.84 Downloading  th-lift-instances-0.1.18
+#5 67.91 Completed    colour-2.3.6 (lib)
+#5 67.92 Starting     parser-combinators-1.2.1 (lib)
+#5 67.99 Downloaded   th-lift-instances-0.1.18
+#5 67.99 Downloading  th-orphans-0.13.12
+#5 68.14 Downloaded   th-orphans-0.13.12
+#5 68.14 Downloading  haskell-src-meta-0.8.7
+#5 68.33 Downloaded   haskell-src-meta-0.8.7
+#5 68.33 Downloading  ansi-terminal-0.11.1
+#5 68.56 Downloaded   ansi-terminal-0.11.1
+#5 68.56 Downloading  ansi-wl-pprint-0.6.9
+#5 68.78 Downloaded   ansi-wl-pprint-0.6.9
+#5 68.78 Downloading  optparse-applicative-0.16.1.0
+#5 68.85 Building     parser-combinators-1.2.1 (lib)
+#5 69.08 Downloaded   optparse-applicative-0.16.1.0
+#5 69.08 Downloading  StateVar-1.2.2
+#5 69.10 Installing   integer-logarithms-1.0.3.1 (lib)
+#5 69.27 Downloaded   StateVar-1.2.2
+#5 69.28 Downloading  contravariant-1.5.5
+#5 69.28 Starting     StateVar-1.2.2 (lib)
+#5 69.50 Completed    integer-logarithms-1.0.3.1 (lib)
+#5 69.56 Starting     prettyprinter-1.7.1 (lib)
+#5 69.58 Downloaded   contravariant-1.5.5
+#5 69.58 Downloading  profunctors-5.6.2
+#5 69.80 Downloaded   profunctors-5.6.2
+#5 69.81 Downloading  semigroupoids-5.3.6
+#5 70.03 Downloaded   semigroupoids-5.3.6
+#5 70.03 Downloading  free-5.1.7
+#5 70.31 Downloaded   free-5.1.7
+#5 70.31 Downloading  recursion-schemes-5.2.2.2
+#5 70.40 Building     StateVar-1.2.2 (lib)
+#5 70.52 Downloaded   recursion-schemes-5.2.2.2
+#5 70.52 Downloading  egison-pattern-src-0.2.1.2
+#5 70.64 Building     prettyprinter-1.7.1 (lib)
+#5 70.74 Downloaded   egison-pattern-src-0.2.1.2
+#5 70.74 Downloading  egison-pattern-src-th-mode-0.2.1.2
+#5 70.99 Downloaded   egison-pattern-src-th-mode-0.2.1.2
+#5 70.99 Downloading  mini-egison-1.0.0
+#5 71.22 Downloaded   mini-egison-1.0.0
+#5 71.22 Downloading  ghc-paths-0.1.0.12
+#5 71.45 Downloaded   ghc-paths-0.1.0.12
+#5 71.45 Downloading  egison-4.0.1
+#5 71.46 Starting     ghc-paths-0.1.0.12 (all, legacy fallback)
+#5 71.75 Installing   StateVar-1.2.2 (lib)
+#5 72.09 Installing   parser-combinators-1.2.1 (lib)
+#5 72.09 Completed    StateVar-1.2.2 (lib)
+#5 72.11 Starting     primitive-0.7.3.0 (lib)
+#5 72.47 Completed    parser-combinators-1.2.1 (lib)
+#5 72.48 Starting     regex-base-0.94.0.2 (lib)
+#5 73.05 Building     primitive-0.7.3.0 (lib)
+#5 73.43 Building     regex-base-0.94.0.2 (lib)
+#5 73.44 Downloaded   egison-4.0.1
+#5 73.44 Downloading  egison-tutorial-4.0.0
+#5 73.64 Installing   indexed-traversable-0.1.2 (lib)
+#5 73.67 Downloaded   egison-tutorial-4.0.0
+#5 74.08 Completed    indexed-traversable-0.1.2 (lib)
+#5 74.09 Starting     safe-0.3.19 (lib)
+#5 74.90 Building     safe-0.3.19 (lib)
+#5 77.82 Building     ghc-paths-0.1.0.12 (all, legacy fallback)
+#5 78.01 Installing   regex-base-0.94.0.2 (lib)
+#5 78.36 Completed    regex-base-0.94.0.2 (lib)
+#5 78.37 Starting     split-0.2.3.4 (lib)
+#5 79.05 Installing   safe-0.3.19 (lib)
+#5 79.21 Building     split-0.2.3.4 (lib)
+#5 79.30 Installing   ghc-paths-0.1.0.12 (all, legacy fallback)
+#5 79.50 Completed    safe-0.3.19 (lib)
+#5 79.52 Starting     splitmix-0.1.0.4 (lib)
+#5 80.48 Building     splitmix-0.1.0.4 (lib)
+#5 81.27 Installing   split-0.2.3.4 (lib)
+#5 81.48 Completed    ghc-paths-0.1.0.12 (all, legacy fallback)
+#5 81.52 Starting     syb-0.7.2.1 (lib)
+#5 81.67 Completed    split-0.2.3.4 (lib)
+#5 81.69 Starting     tagged-0.8.6.1 (lib)
+#5 82.49 Building     syb-0.7.2.1 (lib)
+#5 82.64 Building     tagged-0.8.6.1 (lib)
+#5 83.50 Installing   splitmix-0.1.0.4 (lib)
+#5 83.89 Completed    splitmix-0.1.0.4 (lib)
+#5 83.90 Starting     th-abstraction-0.4.3.0 (lib)
+#5 84.81 Building     th-abstraction-0.4.3.0 (lib)
+#5 86.44 Installing   tagged-0.8.6.1 (lib)
+#5 86.82 Completed    tagged-0.8.6.1 (lib)
+#5 86.83 Starting     th-compat-0.1.3 (lib)
+#5 87.10 Installing   syb-0.7.2.1 (lib)
+#5 87.44 Completed    syb-0.7.2.1 (lib)
+#5 87.47 Starting     transformers-compat-0.7.1 (lib)
+#5 87.66 Building     th-compat-0.1.3 (lib)
+#5 88.33 Building     transformers-compat-0.7.1 (lib)
+#5 89.16 Installing   th-compat-0.1.3 (lib)
+#5 89.59 Completed    th-compat-0.1.3 (lib)
+#5 89.61 Starting     hashable-1.4.0.1 (lib)
+#5 90.71 Building     hashable-1.4.0.1 (lib)
+#5 92.53 Installing   primitive-0.7.3.0 (lib)
+#5 92.91 Completed    primitive-0.7.3.0 (lib)
+#5 92.93 Starting     ansi-terminal-0.11.1 (lib)
+#5 93.31 Installing   transformers-compat-0.7.1 (lib)
+#5 93.81 Completed    transformers-compat-0.7.1 (lib)
+#5 93.83 Starting     contravariant-1.5.5 (lib)
+#5 93.98 Building     ansi-terminal-0.11.1 (lib)
+#5 94.05 Installing   prettyprinter-1.7.1 (lib)
+#5 94.69 Completed    prettyprinter-1.7.1 (lib)
+#5 94.76 Starting     regex-tdfa-1.3.1.1 (lib)
+#5 95.05 Building     contravariant-1.5.5 (lib)
+#5 95.67 Installing   happy-1.20.0 (exe:happy)
+#5 95.74 Completed    happy-1.20.0 (exe:happy)
+#5 95.76 Starting     regex-posix-0.96.0.1 (lib)
+#5 95.82 Building     regex-tdfa-1.3.1.1 (lib)
+#5 96.39 Installing   th-abstraction-0.4.3.0 (lib)
+#5 96.68 Building     regex-posix-0.96.0.1 (lib)
+#5 96.85 Completed    th-abstraction-0.4.3.0 (lib)
+#5 96.87 Starting     random-1.2.1 (lib)
+#5 97.35 Installing   hashable-1.4.0.1 (lib)
+#5 97.77 Completed    hashable-1.4.0.1 (lib)
+#5 97.79 Starting     distributive-0.6.2.1 (lib)
+#5 97.90 Building     random-1.2.1 (lib)
+#5 98.24 Installing   contravariant-1.5.5 (lib)
+#5 98.67 Completed    contravariant-1.5.5 (lib)
+#5 98.73 Starting     vector-0.12.3.1 (lib)
+#5 98.78 Building     distributive-0.6.2.1 (lib)
+#5 99.68 Building     vector-0.12.3.1 (lib)
+#5 101.2 Installing   distributive-0.6.2.1 (lib)
+#5 101.6 Completed    distributive-0.6.2.1 (lib)
+#5 101.6 Starting     transformers-base-0.4.6 (lib)
+#5 101.9 Installing   ansi-terminal-0.11.1 (lib)
+#5 102.3 Completed    ansi-terminal-0.11.1 (lib)
+#5 102.6 Building     transformers-base-0.4.6 (lib)
+#5 103.0 Starting     haskell-src-exts-1.23.1 (lib)
+#5 103.0 Installing   regex-posix-0.96.0.1 (lib)
+#5 103.4 Completed    regex-posix-0.96.0.1 (lib)
+#5 103.4 Starting     th-lift-0.8.2 (lib)
+#5 104.2 Building     haskell-src-exts-1.23.1 (lib)
+#5 104.3 Installing   transformers-base-0.4.6 (lib)
+#5 104.4 Building     th-lift-0.8.2 (lib)
+#5 104.8 Completed    transformers-base-0.4.6 (lib)
+#5 104.8 Starting     th-expand-syns-0.4.9.0 (lib)
+#5 105.9 Building     th-expand-syns-0.4.9.0 (lib)
+#5 107.6 Installing   th-lift-0.8.2 (lib)
+#5 108.0 Completed    th-lift-0.8.2 (lib)
+#5 108.0 Starting     unordered-containers-0.2.16.0 (lib)
+#5 108.4 Installing   th-expand-syns-0.4.9.0 (lib)
+#5 108.8 Completed    th-expand-syns-0.4.9.0 (lib)
+#5 108.8 Starting     scientific-0.3.7.0 (lib)
+#5 108.8 Building     unordered-containers-0.2.16.0 (lib)
+#5 109.7 Building     scientific-0.3.7.0 (lib)
+#5 120.4 Installing   scientific-0.3.7.0 (lib)
+#5 121.2 Completed    scientific-0.3.7.0 (lib)
+#5 121.2 Starting     data-fix-0.3.2 (lib)
+#5 122.4 Building     data-fix-0.3.2 (lib)
+#5 126.3 Installing   data-fix-0.3.2 (lib)
+#5 127.1 Completed    data-fix-0.3.2 (lib)
+#5 127.1 Starting     case-insensitive-1.2.1.0 (lib)
+#5 130.4 Building     case-insensitive-1.2.1.0 (lib)
+#5 132.4 Installing   random-1.2.1 (lib)
+#5 133.1 Completed    random-1.2.1 (lib)
+#5 133.1 Starting     comonad-5.0.8 (lib)
+#5 133.6 Installing   case-insensitive-1.2.1.0 (lib)
+#5 134.1 Completed    case-insensitive-1.2.1.0 (lib)
+#5 134.1 Starting     ansi-wl-pprint-0.6.9 (lib)
+#5 134.3 Building     comonad-5.0.8 (lib)
+#5 135.5 Building     ansi-wl-pprint-0.6.9 (lib)
+#5 139.1 Installing   ansi-wl-pprint-0.6.9 (lib)
+#5 139.9 Completed    ansi-wl-pprint-0.6.9 (lib)
+#5 139.9 Starting     th-reify-many-0.1.10 (lib)
+#5 140.9 Installing   comonad-5.0.8 (lib)
+#5 141.1 Installing   unordered-containers-0.2.16.0 (lib)
+#5 141.2 Building     th-reify-many-0.1.10 (lib)
+#5 141.5 Completed    comonad-5.0.8 (lib)
+#5 141.6 Starting     megaparsec-9.2.0 (lib)
+#5 141.8 Completed    unordered-containers-0.2.16.0 (lib)
+#5 141.8 Starting     optparse-applicative-0.16.1.0 (lib)
+#5 142.7 Building     megaparsec-9.2.0 (lib)
+#5 142.9 Building     optparse-applicative-0.16.1.0 (lib)
+#5 143.5 Installing   th-reify-many-0.1.10 (lib)
+#5 144.0 Completed    th-reify-many-0.1.10 (lib)
+#5 144.0 Starting     bifunctors-5.5.11 (lib)
+#5 144.9 Building     bifunctors-5.5.11 (lib)
+#5 158.1 Installing   optparse-applicative-0.16.1.0 (lib)
+#5 159.4 Completed    optparse-applicative-0.16.1.0 (lib)
+#5 167.8 Installing   regex-tdfa-1.3.1.1 (lib)
+#5 168.5 Completed    regex-tdfa-1.3.1.1 (lib)
+#5 170.7 Installing   bifunctors-5.5.11 (lib)
+#5 171.2 Completed    bifunctors-5.5.11 (lib)
+#5 171.2 Starting     profunctors-5.6.2 (lib)
+#5 171.2 Starting     semigroupoids-5.3.6 (lib)
+#5 172.2 Building     profunctors-5.6.2 (lib)
+#5 172.2 Building     semigroupoids-5.3.6 (lib)
+#5 173.5 Installing   megaparsec-9.2.0 (lib)
+#5 174.0 Completed    megaparsec-9.2.0 (lib)
+#5 187.5 Installing   profunctors-5.6.2 (lib)
+#5 188.0 Completed    profunctors-5.6.2 (lib)
+#5 191.0 Installing   semigroupoids-5.3.6 (lib)
+#5 191.5 Completed    semigroupoids-5.3.6 (lib)
+#5 191.6 Starting     free-5.1.7 (lib)
+#5 192.4 Building     free-5.1.7 (lib)
+#5 221.8 Installing   free-5.1.7 (lib)
+#5 222.3 Completed    free-5.1.7 (lib)
+#5 222.4 Starting     recursion-schemes-5.2.2.2 (lib)
+#5 223.2 Building     recursion-schemes-5.2.2.2 (lib)
+#5 237.8 Installing   recursion-schemes-5.2.2.2 (lib)
+#5 238.3 Completed    recursion-schemes-5.2.2.2 (lib)
+#5 238.3 Starting     egison-pattern-src-0.2.1.2 (lib)
+#5 239.4 Building     egison-pattern-src-0.2.1.2 (lib)
+#5 259.2 Installing   egison-pattern-src-0.2.1.2 (lib)
+#5 259.8 Completed    egison-pattern-src-0.2.1.2 (lib)
+#5 263.6 Installing   vector-0.12.3.1 (lib)
+#5 264.0 Completed    vector-0.12.3.1 (lib)
+#5 264.1 Starting     th-lift-instances-0.1.18 (lib)
+#5 264.8 Building     th-lift-instances-0.1.18 (lib)
+#5 266.6 Installing   th-lift-instances-0.1.18 (lib)
+#5 267.0 Completed    th-lift-instances-0.1.18 (lib)
+#5 267.0 Starting     th-orphans-0.13.12 (lib)
+#5 267.7 Building     th-orphans-0.13.12 (lib)
+#5 276.9 Installing   th-orphans-0.13.12 (lib)
+#5 277.4 Completed    th-orphans-0.13.12 (lib)
