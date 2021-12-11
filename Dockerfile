@@ -1,8 +1,5 @@
-# FROM scratch
-# ARG HASKELL_VERSION
-# ENV HASKELL_VERSION ${HASKELL_VERSION:-8}
-# FROM haskell:${HASKELL_VERSION}
-FROM haskell:8
+ARG HASKELL_VERSION
+FROM haskell:$HASKELL_VERSION
 LABEL maintainer="Satoshi Egi <egi@egison.org>"
 
 ARG EGISON_VERSION
@@ -22,8 +19,7 @@ RUN cabal update && \
   egison-tutorial; \
   else \
   cabal install \
-  egison \
-  --constraint "egison == ${EGISON_VERSION}"; \
+  egison-${EGISON_VERSION}; \
   fi
 
 WORKDIR /docker
