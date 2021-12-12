@@ -10,10 +10,11 @@ ENV EGISON_VERSION ${EGISON_VERSION:-4.1.2}
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# with tutorial: 3.0.12 - 999.9.9
+
 RUN cabal update && \
-  if [ "$( \
-  echo -e "3.0.11\\n${EGISON_VERSION}" | sort -V | head -1 \
-  )" = "3.0.11" ]; then \
+  if [ "$(echo -e "3.0.12\\n${EGISON_VERSION}\n999.9.9" | \
+  sort -V | head -2)" = "${EGISON_VERSION}" ]; then \
   cabal install \
   egison-${EGISON_VERSION} \
   egison-tutorial; \
