@@ -1,5 +1,12 @@
 # The Egison Programming Language
 
+[![Deploy (Build && Push)]](https://github.com/egison/docker-egison/actions/workflows/deploy.yml
+) [![Scheduled test]](https://github.com/egison/docker-egison/actions/workflows/schedule.yml
+)
+
+[Deploy (Build && Push)]: https://github.com/egison/docker-egison/actions/workflows/deploy.yml/badge.svg
+[Scheduled test]: https://github.com/egison/docker-egison/actions/workflows/schedule.yml/badge.svg
+
 Egison is the **pattern-matching-oriented**, purely functional programming language.
 We can directly represent pattern-matching against lists, multisets, sets, trees, graphs and any kind of data types.
 This is the docker repository of the interpreter of Egison.
@@ -17,7 +24,7 @@ docker pull egison/egison
 We can call the Egison interpreter with the following command.
 
 ```shellsession
-$ docker run -t -i egison/egison
+$ docker run -it egison/egison
 Egison Version 4.1.2
 https://www.egison.org
 Welcome to Egison Interpreter!

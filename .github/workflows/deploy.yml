@@ -1,8 +1,5 @@
 name: Deploy (Build && Push)
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:
@@ -12,8 +9,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Login to DockerHub
-        run: docker login \
-          -u "${{ secrets.DOCKERHUB_USERNAME }}" \
-          -p "${{ secrets.DOCKERHUB_TOKEN }}"
+        run: |
+          docker login \
+                 -u "${{ secrets.DOCKERHUB_USERNAME }}" \
+                 -p "${{ secrets.DOCKERHUB_TOKEN }}"
       - name: Build && Push
         run: ./deploy.sh 8 egison/egison

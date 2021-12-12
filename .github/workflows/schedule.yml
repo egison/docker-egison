@@ -1,6 +1,12 @@
 name: Scheduled test
 
 on:
+  push:
+    branch:
+      - master
+  pull_request:
+    branch:
+      - master
   schedule:
     - cron: "0 11 * * *"
   workflow_dispatch:
@@ -10,5 +16,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: docker build -t egison/egison:latest .
-      - run: docker run --rm -i egison/egison:latest -v
+      - name: Check latest Egison version
+        run: |
+          echo "EGISON_LATEST=$(
+            curl -s https://hackage.haskell.org/package/egison |
+            grep -oE '<strong>[0-9]+\.[0-9]+\.[0-9]+' | sed 's/<strong>//'
+          )" >> "$GITHUB_ENV"
+      - name: Build
+        run: |
+          docker build -t egison/egison:latest \
+                       --build-arg EGISON_VERSION="$EGISON_LATEST" \
+                       --build-arg HASKELL_VERSION="8" .
+      - name: Run
+        run: docker run --rm -i egison/egison:latest -v
