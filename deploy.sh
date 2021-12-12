@@ -1,24 +1,27 @@
 #!/usr/bin/env bash
 
-# Usage:
-#
-# Build Only:
-#   $ TEST=1 ./deploy.sh
-# Build && Push
-#   $ ./deploy.sh
+###################################
+# Usage:                          #
+#                                 #
+# Build Only:                     #
+#   $ TEST=1 ./deploy.sh 8        #
+# Build && Push                   #
+#   $ ./deploy.sh 8 egison/egison #
+#                                 #
+###################################
 
 set -euo pipefail
 
 if ! command -v docker &>/dev/null; then
   echo "docker is not found.">&2
   exit 1
-elif [ "$#" != "2" ]; then
+elif ! [[ "$#" =~ ^[12]$ ]]; then
   echo 'usage: '"$0"' <haskell version> [dockerhub repo]'>&2
   echo 'if you set `TEST=1`, skip pushing'>&2
   exit 1
 fi
 
-HASKELL_VERSION=${1:-8}
+HASKELL_VERSION="${1:-8}"
 # REPO="${2:-egison/egison}"
 REPO="${2:-eggplanter/egison}"
 TEST="${TEST:-}"
