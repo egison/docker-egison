@@ -31,9 +31,8 @@ We can execute an Egison script with the following command evn under local curre
 
 ```shellsession
 $ cat > hello.egi
-(define $main
-  (lambda [$args]
-    (print "Hello, world!")))
+def main args := do
+  print "Hello, world!"
 $ docker run -it -v $(pwd):/docker:ro egison/egison:latest hello.egi
 Hello, world!
 ```
