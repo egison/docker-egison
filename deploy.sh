@@ -54,7 +54,6 @@ fi
 ok=("OK:")
 ng=("NG:")
 for v in "${EGISON_VERSIONS[@]}"; do
-  break
   echo "[[[ $v ]]]"
   if
     docker build -t "${REPO}:${v}" \
