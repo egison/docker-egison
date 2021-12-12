@@ -24,7 +24,7 @@ docker pull egison/egison
 We can call the Egison interpreter with the following command.
 
 ```shellsession
-$ docker run -t -i egison/egison
+$ docker run -it egison/egison
 Egison Version 4.1.2
 https://www.egison.org
 Welcome to Egison Interpreter!

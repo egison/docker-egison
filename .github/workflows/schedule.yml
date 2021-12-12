@@ -1,6 +1,12 @@
 name: Scheduled test
 
 on:
+  push:
+    branch:
+      - master
+  pull_request:
+    branch:
+      - master
   schedule:
     - cron: "0 11 * * *"
   workflow_dispatch:
@@ -18,7 +24,7 @@ jobs:
           )" >> "$GITHUB_ENV"
       - name: Build
         run: |
-          docker build -t egison/egison:latest . \
+          docker build -t egison/egison:latest \
                        --build-arg EGISON_VERSION="$EGISON_LATEST" \
                        --build-arg HASKELL_VERSION="8" .
       - name: Run
