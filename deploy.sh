@@ -13,12 +13,12 @@
 
 set -euo pipefail
 
-if ! command -v docker &>/dev/null; then
-  echo "docker is not found.">&2
+if ! command -v docker &> /dev/null; then
+  echo "docker is not found." >&2
   exit 1
-elif ! [[ "$#" =~ ^[12]$ ]]; then
-  echo 'usage: '"$0"' <haskell version> [dockerhub repo]'>&2
-  echo 'if you set `TEST=1`, skip pushing'>&2
+elif ! [[ $# =~ ^[12]$ ]]; then
+  echo 'usage: '"$0"' <haskell version> [dockerhub repo]' >&2
+  echo 'set "TEST=1" if you want to skip pushing.' >&2
   exit 1
 fi
 
@@ -53,7 +53,8 @@ fi
 
 ok=("OK:")
 ng=("NG:")
-for v in "${EGISON_VERSIONS[@]}"; do break
+for v in "${EGISON_VERSIONS[@]}"; do
+  break
   echo "[[[ $v ]]]"
   if
     docker build -t "${REPO}:${v}" \
