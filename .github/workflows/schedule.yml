@@ -1,0 +1,14 @@
+name: Scheduled test
+
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: docker build -t egison/egison:latest .
+      - run: docker run --rm -i egison/egison:latest -v
