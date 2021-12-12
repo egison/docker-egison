@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 ###################################
+#                                 #
 # Usage:                          #
 #                                 #
 # Build Only:                     #
@@ -22,9 +23,10 @@ elif ! [[ "$#" =~ ^[12]$ ]]; then
 fi
 
 HASKELL_VERSION="${1:-8}"
-# REPO="${2:-egison/egison}"
-REPO="${2:-eggplanter/egison}"
+REPO="${2:-egison/egison}"
+
 TEST="${TEST:-}"
+
 EGISON_VERSIONS=(
   # 0.x-3.8.x is failed to build on haskell:7 - 9
 
@@ -42,8 +44,7 @@ EGISON_VERSIONS=(
   4.0.0 4.0.1 4.0.2 4.0.3
   4.1.0 4.1.1 4.1.2
 )
-LATEST_VERSION="4.1.2"
-# LATEST_VERSION="${EGISON_VERSIONS[${#EGISON_VERSIONS[@]} - 1]}"
+LATEST_VERSION="${EGISON_VERSIONS[${#EGISON_VERSIONS[@]} - 1]}"
 
 if ! [ -f "./Dockerfile" ]; then
   echo "err: Dockerfile is not found." >&2
@@ -52,7 +53,7 @@ fi
 
 ok=("OK:")
 ng=("NG:")
-for v in "${EGISON_VERSIONS[@]}"; do
+for v in "${EGISON_VERSIONS[@]}"; do break
   echo "[[[ $v ]]]"
   if
     docker build -t "${REPO}:${v}" \
@@ -72,10 +73,10 @@ if
     --build-arg EGISON_VERSION="$LATEST_VERSION" \
     --build-arg HASKELL_VERSION="$HASKELL_VERSION" .
 then
-  ok+=("$v")
+  ok+=("latest")
   [ "$TEST" = "1" ] || docker push "${REPO}:latest"
 else
-  ng+=("$v")
+  ng+=("latest")
 fi
 
 echo "${ok[@]}"
