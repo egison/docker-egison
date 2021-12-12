@@ -1,6 +1,12 @@
 name: Scheduled test
 
 on:
+  push:
+    branch:
+      - master
+  pull_request:
+    branch:
+      - master
   schedule:
     - cron: "0 11 * * *"
   workflow_dispatch:
